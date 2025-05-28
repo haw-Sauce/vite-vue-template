@@ -2,17 +2,17 @@
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "baseUrl": ".", // 查询的基础路径
+    "paths": {
+      "@/*": ["src/*"]
+    }, // 路径映射,配合别名使用
     /* Linting */
     "strict": true,
+    "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
-    "baseUrl": ".", //查询的基础路径
-    "paths": {
-      "@/*": ["src/*"]
-    }, //路径映射,配合别名使用
+    "noUncheckedSideEffectImports": true
   },
   "include": [
     "src/**/*.ts",
